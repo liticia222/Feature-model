@@ -5,9 +5,9 @@ function App() {
     <div class="grid grid-cols-4 gap-4 auto-rows-min p-4">
 
   <div class="col-span-1">
-    <button class="float-left bg-blue-500 text-white px-4 py-2 rounded">
+    <Button>
       Bouton 1
-    </button>
+    </Button>
   </div>
 
   <div class="col-span-1">
