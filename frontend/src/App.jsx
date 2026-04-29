@@ -94,7 +94,7 @@ const DnDFlow = () => {
               onDragOver={onDragOver}
               fitView
             >
-              <Controls />
+              <Controls position="top-right" />
               <Background />
             </ReactFlow>
           </div>
