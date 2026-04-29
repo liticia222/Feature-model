@@ -1,15 +1,3 @@
-/*import Sidebar from "@/components/ui/Sidebar";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/components/ui/resizable"
-import Toolbar from "./components/ui/Toolbar";
-
-import { useState, useCallback } from 'react';
-import { ReactFlow, applyNodeChanges, applyEdgeChanges, addEdge } from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
-
 import React, { useRef, useCallback } from 'react';
 import {
   ReactFlow,
@@ -26,36 +14,6 @@ import '@xyflow/react/dist/style.css';
 
 import Sidebar from './SidebarReact';
 import { DnDProvider, useDnD } from './DnDContext';
-
-function App() {
-
-  return (
-    <div className="grid grid-cols-4 gap-4 auto-rows-min p-4">
-      <Toolbar />
-      <Dnd />
-    </div>
-
-  )
-}
-
-export default App*/
-
-import React, { useRef, useCallback } from 'react';
-import {
-  ReactFlow,
-  ReactFlowProvider,
-  addEdge,
-  useNodesState,
-  useEdgesState,
-  Controls,
-  useReactFlow,
-  Background,
-} from '@xyflow/react';
-
-import '@xyflow/react/dist/style.css';
-
-import Sidebar from '@/components/ui/SidebarReact';
-import { DnDProvider, useDnD } from '@/components/ui/DnDContext';
 
 const initialNodes = [
   {
