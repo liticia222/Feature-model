@@ -12,6 +12,9 @@ export default () => {
   return (
     <aside>
       <div className="description">You can drag these nodes to the pane on the right.</div>
+      <div className="dndnode" onDragStart={(event) => onDragStart(event, 'feature')} draggable>
+        Feature
+      </div>
       <div className="dndnode" onDragStart={(event) => onDragStart(event, 'or')} draggable>
         OR
       </div>

@@ -17,9 +17,15 @@ import Sidebar from '@/components/ui/SidebarReact';
 import { DnDProvider, useDnD } from '@/components/ui/DnDContext';
 
 import { NodeFeature } from "./components/ui/NodeFeature";
+import {NodeXOR} from "@/components/ui/NodeXOR";
+import {NodeOR} from "@/components/ui/NodeOR";
+import {NodeCombinaison} from "@/components/ui/NodeCombinaison";
 
 const nodeTypes = {
   feature: NodeFeature,
+  xor: NodeXOR,
+  or: NodeOR,
+  combinaison: NodeCombinaison
 };
 
 const initialNodes = [

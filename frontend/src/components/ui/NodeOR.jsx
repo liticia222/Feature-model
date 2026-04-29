@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-export function NodeFeature(props) {
+export function NodeOR(props) {
   const onChange = useCallback((evt) => {
     console.log(evt.target.value);
   }, []);
@@ -8,7 +8,7 @@ export function NodeFeature(props) {
   return (
     <div className="text-updater-node">
       <div>
-        <label></label>
+        <label>OR</label>
       </div>
     </div>
   );
