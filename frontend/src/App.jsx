@@ -16,11 +16,17 @@ import '@xyflow/react/dist/style.css';
 import Sidebar from '@/components/ui/SidebarReact';
 import { DnDProvider, useDnD } from '@/components/ui/DnDContext';
 
+import { NodeFeature } from "./components/ui/NodeFeature";
+
+const nodeTypes = {
+  feature: NodeFeature,
+};
+
 const initialNodes = [
   {
     id: '1',
-    type: 'input',
-    data: { label: 'input node' },
+    type: 'feature',
+    data: { value: 123 },
     position: { x: 250, y: 5 },
   },
 ];
@@ -76,6 +82,8 @@ const DnDFlow = () => {
     event.dataTransfer.effectAllowed = 'move';
   };
 
+
+
   return (
     <>
       <div className="grid grid-row-2 gap-4 grid-cols-1 p-4">
@@ -86,6 +94,7 @@ const DnDFlow = () => {
             <ReactFlow
               nodes={nodes}
               edges={edges}
+              nodeTypes={nodeTypes}
               onNodesChange={onNodesChange}
               onEdgesChange={onEdgesChange}
               onConnect={onConnect}
