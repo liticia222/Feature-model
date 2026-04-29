@@ -1,0 +1,44 @@
+
+[93mACE v2.5 [0m
+
+  [94minstance[0m
+    name:app
+    args:app.xml
+
+ [33m...Loading[0m variables
+
+ [33m...Loading[0m constraints
+
+  [94mdomains[0m
+    types:2  values:20  deleted:1  sizes:[2:9,3:1]
+  [94mvariables[0m
+    count:10  arrays:[x:7,r:2,aux_gb:1]  degrees:[2:4,3:5,4:1]
+  [94mconstraints[0m
+    count:16  specific:16  arities:[1:8,2:5,3:3]
+    distribution:[Extension1:8,Mul2bEQ:1,Sub2EQ:4,SumWeightedEQ:1,SumWeightedGE:1,SumWeightedLE:1]
+    wck:0.26  cpu:0.796  mem:25M151
+
+ [33m...Building[0m solver
+
+  [94msolver[0m
+    guaranteedAC:true
+    wck:0.29  cpu:0.825  mem:30M657
+
+  [94mpreprocessing[0m
+    effs:8  values:13  unsat:true
+    wck:0.001  cpu:0.826  mem:30M657
+
+  [94msearch[0m
+
+  [94mglobal[0m
+    effs:8
+    stop:FULL_EXPLORATION
+    wck:0.29  cpu:0.826  mem:30M657
+
+[92ms UNSATISFIABLE[0m
+[92m
+d WRONG DECISIONS[0m  0
+[92md FOUND SOLUTIONS[0m  0
+[92md COMPLETE EXPLORATION[0m
+
+c real time : 0.827

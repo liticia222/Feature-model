@@ -1,0 +1,26 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="v" size="[5]"> 0 1 </array>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[2]">
+      <domain for="aux_gb[0]"> 0 1 </domain>
+      <domain for="aux_gb[1]"> 0..2 </domain>
+    </array>
+  </variables>
+  <constraints>
+    <intension> eq(v[0],1) </intension>
+    <intension> eq(v[0],v[1]) </intension>
+    <sum>
+      <list> v[2..4] </list>
+      <condition> (ge,aux_gb[0]) </condition>
+    </sum>
+    <intension> eq(mul(1,v[1]),aux_gb[0]) </intension>
+    <sum>
+      <list> v[2..4] </list>
+      <condition> (le,aux_gb[1]) </condition>
+    </sum>
+    <intension> eq(mul(2,v[1]),aux_gb[1]) </intension>
+    <intension> eq(v[2],1) </intension>
+    <intension> eq(v[3],1) </intension>
+    <intension> eq(v[4],1) </intension>
+  </constraints>
+</instance>

@@ -1,0 +1,11 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[2]"> 0 1 </array>
+  </variables>
+  <constraints>
+    <sum>
+      <list> x[0] x[1] </list>
+      <condition> (eq,1) </condition>
+    </sum>
+  </constraints>
+</instance>

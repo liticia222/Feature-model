@@ -1,0 +1,17 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[3]"> 0 1 </array>
+    <array id="r" size="[1]"> 0 1 </array>
+  </variables>
+  <constraints>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[0],r[0]) </intension>
+    <sum>
+      <list> x[1] x[2] </list>
+      <condition> (eq,r[0]) </condition>
+    </sum>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[1],1) </intension>
+    <intension> eq(x[2],1) </intension>
+  </constraints>
+</instance>

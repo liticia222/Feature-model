@@ -1,0 +1,13 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[3]"> 0 1 </array>
+  </variables>
+  <constraints>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[0],x[1]) </intension>
+    <intension> le(x[2],x[0]) </intension>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[1],0) </intension>
+    <intension> eq(x[2],0) </intension>
+  </constraints>
+</instance>

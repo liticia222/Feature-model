@@ -1,0 +1,22 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="x" size="[3]"> 0 1 </array>
+    <array id="r" size="[1]"> 0 1 </array>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[1]"> 0..2 </array>
+  </variables>
+  <constraints>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[0],r[0]) </intension>
+    <intension> eq(r[0],x[1]) </intension>
+    <intension> eq(r[0],x[2]) </intension>
+    <intension> imp(r[0],eq(aux_gb[0],1)) </intension>
+    <sum>
+      <list> x[1] x[2] </list>
+      <condition> (eq,aux_gb[0]) </condition>
+    </sum>
+    <intension> imp(eq(r[0],0),eq(aux_gb[0],0)) </intension>
+    <intension> eq(x[0],1) </intension>
+    <intension> eq(x[1],1) </intension>
+    <intension> eq(x[2],0) </intension>
+  </constraints>
+</instance>

@@ -1,0 +1,53 @@
+
+[93mACE v2.5 [0m
+
+  [94minstance[0m
+    name:app
+    args:app.xml
+
+ [33m...Loading[0m variables
+
+ [33m...Loading[0m constraints
+
+  [94mdomains[0m
+    types:1  values:2  sizes:[2:1]
+  [94mvariables[0m
+    count:1  arrays:[x:1]  degrees:[2:1]
+  [94mconstraints[0m
+    count:2  specific:2  arities:[1:2]
+    distribution:[Extension1:2]
+    wck:0.17  cpu:0.665  mem:23M46
+
+ [33m...Building[0m solver
+
+  [94msolver[0m
+    guaranteedAC:true
+    wck:0.20  cpu:0.685  mem:28M502
+
+  [94mpreprocessing[0m
+    effs:1  values:1  removedByAC:1  unsat:false
+    cpu:0.686  mem:28M753
+
+  [94msearch[0m
+    run1  dpts:-1..0  effs:1  wck:0.00  sols:1
+
+  [94mglobal[0m
+    effs:1
+    stop:REACHED_GOAL  sols:1  sol1Cpu:0.687
+    wck:0.20  cpu:0.691  mem:29M22
+
+
+  Solution 1 in JSON format:
+   {'x': [1]}
+
+[92ms SATISFIABLE[0m
+[92m
+v[0m  <instantiation id='sol1' type='solution'> <list> x[] </list> <values> 1 </values> </instantiation>
+[92m
+d WRONG DECISIONS[0m  0
+[92md FOUND SOLUTIONS[0m  1
+[92md WCK FIRST[0m 0.20
+[92md WCK LAST[0m  0.20
+[91md INCOMPLETE EXPLORATION[0m
+
+c real time : 0.698
