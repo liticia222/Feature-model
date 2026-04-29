@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+  height: 100%; /* important */
 }
 
 #app {
@@ -16,13 +17,21 @@ body {
   height: 100vh;
 }
 
+/* --- FIX PRINCIPAL --- */
+/* La zone ReactFlow doit avoir une hauteur explicite */
 .dndflow {
-  flex-direction: column;
   display: flex;
-  flex-grow: 1;
-  height: 100%;
+  flex-direction: column;
+  height: 100vh; /* <-- essentiel */
 }
 
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%; /* maintenant fonctionne car parent a une hauteur */
+  min-height: 0; /* évite les overflow flex */
+}
+
+/* --- Sidebar --- */
 .dndflow aside {
   border-right: 1px solid #eee;
   padding: 15px 10px;
@@ -54,15 +63,11 @@ body {
   border-color: #ff0072;
 }
 
-.dndflow .reactflow-wrapper {
-  flex-grow: 1;
-  height: 100%;
-}
-
 .dndflow .selectall {
   margin-top: 10px;
 }
 
+/* --- Desktop layout --- */
 @media screen and (min-width: 768px) {
   .dndflow {
     flex-direction: row;
@@ -75,7 +80,7 @@ body {
 }
 
 
-/*@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.dark *));
 
 .counter {
   font-size: 16px;
@@ -384,4 +389,4 @@ body {
   html {
     @apply font-sans;
   }
-}*/
+}
