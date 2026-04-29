@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { Position, Handle } from '@xyflow/react';
 
 export function NodeFeature(props) {
   const onChange = useCallback((evt) => {
@@ -9,6 +10,8 @@ export function NodeFeature(props) {
     <div className="text-updater-node">
       <div>
         <label></label>
+        <Handle type="source" position={Position.Top} />
+        <Handle type="target" position={Position.Bottom} />
       </div>
     </div>
   );
